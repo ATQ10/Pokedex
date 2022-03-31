@@ -1,0 +1,157 @@
+<div id="general">
+    <div class="nombre">
+        <h2>
+            NOMBRE: <span> {{ getName() }}  </span>
+        </h2>
+    </div>
+    <div class="carta">
+        <div class="cuadro_nombre">
+            <div class="base_nombre">
+                <span class="name">{{pokemon.name}}</span>
+                <div class="cuadro-img_nombre">
+                    <img [src]="imgPrincipal" alt="Pokemon">
+                </div>
+                <div class="info">
+                    <b>ID: </b> {{pokemon.id}}
+                    <br>
+                    <b>HP: </b> {{pokemon.base_experience}}
+                    <br>
+                    <b>Peso: </b> {{pokemon.weight}}
+                    <br>
+                    <b>Altura: </b> {{pokemon.height}}
+                </div>
+                <span class="detalles" (click)="regresar()">
+                    Regresar
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="imagenes">
+        <div class="titulo_imagenes">
+            <h2>
+                Imágenes de perspectiva
+            </h2>
+        </div>
+        <div class="grid-pokemon">
+            <div class="cuadro" *ngFor="let imagen of imagenes">
+                <div class="base">
+                    <span class="name">{{getName()}}</span>
+                    <div class="cuadro-img">
+                        <img [src]="imagen.url" alt="Pokemon">
+                    </div>
+                    <div class="info">
+                        <b>Perfil: </b> <br>{{imagen.perfil}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="habilidades">
+        <div class="titulo_habilidades">
+            <h2>
+                Habilidades
+            </h2>
+        </div>
+        <div class="carta">
+            <div class="cuadro_nombre">
+                <div class="base_nombre">
+                    <span class="name">{{pokemon.name}}</span>
+                    <div class="cuadro-img_nombre">
+                        <img [src]="imgPrincipal" alt="Pokemon">
+                    </div>
+                    <div class="info">
+                        <b>Habilidades: </b>
+                        <br>
+                        <ul class="lista-habilidad">
+                            <li *ngFor="let habilidad of pokemon.abilities">
+                                {{habilidad.ability.name}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="juegos">
+        <div class="titulo_juegos">
+            <h2>
+                Juegos en los que se encuentra
+            </h2>
+        </div>
+        <div class="carta">
+            <div class="cuadro_juegos">
+                <div class="base_juegos">
+                    <span class="name">{{pokemon.name}}</span>
+                    <div class="cuadro-img_juegos">
+                        <img [src]="imgPrincipal" alt="Pokemon">
+                    </div>
+                    <div class="info">
+                        <b>Juegos: </b>
+                        <ul class="lista-juegos">
+                            <li *ngFor="let juego of pokemon.game_indices">
+                                {{juego.version.name}}
+                            </li>
+                            <li *ngIf="juegos==0">
+                                No se encuentran juegos
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tipos">
+        <div class="titulo_tipos">
+            <h2>
+                Tipos
+            </h2>
+        </div>
+        <div class="carta">
+            <div class="cuadro_nombre">
+                <div class="base_nombre">
+                    <span class="name">{{pokemon.name}}</span>
+                    <div class="cuadro-img_nombre">
+                        <img [src]="imgPrincipal" alt="Pokemon">
+                    </div>
+                    <div class="info">
+                        <b>Tipos: </b>
+                        <br>
+                        <ul class="lista-tipos">
+                            <li *ngFor="let tipo of pokemon.types">
+                                {{tipo.type.name}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="movimientos">
+        <div class="titulo_movimientos">
+            <h2>
+                Movimientos
+            </h2>
+        </div>
+        <div class="carta">
+            <div class="cuadro_movimientos">
+                <div class="base_movimientos">
+                    <span class="name">{{pokemon.name}}</span>
+                    <div class="cuadro-img_movimientos">
+                        <img [src]="imgPrincipal" alt="Pokemon">
+                    </div>
+                    <div class="info">
+                        <b>Movimientos: </b>
+                        <ul class="lista-movimientos">
+                            <li *ngFor="let movimiento of pokemon.moves">
+                                {{movimiento.move.name}}
+                            </li>
+                            <li *ngIf="movimientos==0">
+                                No se encuentran movimientos
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

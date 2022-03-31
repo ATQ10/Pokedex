@@ -1,0 +1,11 @@
+/* Header */
+header {
+    padding: 25px 5px;
+    text-align: center;
+    background-color: rgba(252, 249, 66, 0.527);
+}
+
+header h1 {
+    text-transform: uppercase;
+    color: green;
+}

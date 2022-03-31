@@ -1,0 +1,15 @@
+/* Footer */
+footer {
+    padding: 25px 5px;
+    text-align: center;
+    background-color: rgba(252, 249, 66, 0.527);
+}
+
+footer div {
+    text-transform: uppercase;
+    color: green;
+    font-weight: 600;
+}
+a{
+    color: green;
+}
